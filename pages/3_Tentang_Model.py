@@ -1,4 +1,3 @@
-%%writefile forecasting-curahhujan-bandung-apps/pages/3_Tentang_Model.py
 import streamlit as st
 import pandas as pd
 import numpy as np

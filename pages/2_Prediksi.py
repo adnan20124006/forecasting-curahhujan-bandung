@@ -1,4 +1,3 @@
-%%writefile forecasting-curahhujan-bandung-apps/pages/2_Prediksi.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -8,8 +7,8 @@ st.set_page_config(page_title="Prediksi — Curah Hujan Bandung", page_icon="", 
 
 @st.cache_data
 def load_data():
-    df_historis = pd.read_csv('data_historis.csv', parse_dates=['tanggal'])
-    df_prediksi = pd.read_csv('semua_prediksi.csv', parse_dates=['tanggal'])
+    df_historis = pd.read_csv('model_stremlit/data_historis.csv', parse_dates=['tanggal'])
+    df_prediksi = pd.read_csv('model_stremlit/semua_prediksi.csv', parse_dates=['tanggal'])
     return df_historis, df_prediksi
 
 df_historis, df_prediksi = load_data()

@@ -1,4 +1,3 @@
-%%writefile forecasting-curahhujan-bandung-apps/pages/1_EDA.py
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -9,7 +8,7 @@ st.set_page_config(page_title="EDA — Curah Hujan Bandung", page_icon="📊", l
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data_historis.csv', parse_dates=['tanggal'])
+    df = pd.read_csv('model_streamlit/data_historis.csv', parse_dates=['tanggal'])
     return df
 
 df = load_data()
